@@ -1,9 +1,12 @@
 from flask import Flask, request, jsonify
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
+import os
 
 # Load model & tokenizer
-model = AutoModelForSeq2SeqLM.from_pretrained("./flan-t5-toefl1")
-tokenizer = AutoTokenizer.from_pretrained("./flan-t5-toefl1")
+# model = AutoModelForSeq2SeqLM.from_pretrained("./flan-t5-toefl1")
+# tokenizer = AutoTokenizer.from_pretrained("./flan-t5-toefl1")
+model = AutoModelForSeq2SeqLM.from_pretrained("azza21/flan-t5-toefl1")
+tokenizer = AutoTokenizer.from_pretrained("azza21/flan-t5-toefl1")
 
 app = Flask(__name__)
 
